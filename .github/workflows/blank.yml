@@ -22,11 +22,12 @@ jobs:
 
     services:
       postgres:
-        image: postgres:11.10
+        image: bitnami/postgresql:11.10.0
         env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: postgres
+          POSTGRESQL_USER: postgres
+          POSTGRESQL_PASSWORD: postgres
+          POSTGRESQL_DB: postgres
+          POSTGRESQL_FSYNC: off
         ports:
             # will assign a random free host port
           - 5432:5432
