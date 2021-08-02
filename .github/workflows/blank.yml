@@ -28,6 +28,9 @@ jobs:
           POSTGRESQL_PASSWORD: postgres
           POSTGRESQL_DB: postgres
           POSTGRESQL_FSYNC: off
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: postgres
         ports:
             # will assign a random free host port
           - 5432:5432
