@@ -38,4 +38,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: psql postgresql://postgres:postgres@localhost:5432/postgres -c "select name, setting from pg_settings where name in ('fsync', 'synchronous_commit', 'full_page_writes');"
